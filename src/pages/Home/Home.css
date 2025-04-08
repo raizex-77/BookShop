@@ -1,0 +1,39 @@
+.home-page {
+  padding: 32px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.ad-section {
+  margin-bottom: 40px;
+}
+
+.ad-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* 👇 Стили для кнопки Топ-50 */
+.top-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.top-button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.top-button:hover {
+  background-color: #43a047;
+}

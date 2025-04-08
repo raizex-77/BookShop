@@ -1,0 +1,64 @@
+.favorites-page {
+  padding: 32px;
+  background-color: #fafafa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.favorites-page h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.favorite-cover {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.favorite-item h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.favorite-item p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.favorite-item button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.favorite-item button:hover {
+  background-color: #c0392b;
+}
