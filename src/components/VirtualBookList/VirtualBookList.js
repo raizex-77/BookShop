@@ -17,8 +17,8 @@ function BookRow({ data, index, style }) {
 }
 
 export default function VirtualBookList() {
-  const { books, loading } = useBooks(); // 👈 правильный способ деструктуризации
-  const topBooks = books.filter(book => book.virtualTop); // 👈 фильтрация
+  const { books, loading } = useBooks(); 
+  const topBooks = books.filter(book => book.virtualTop); 
 
   if (loading) return <p>Загрузка книг...</p>;
 
