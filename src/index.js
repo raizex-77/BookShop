@@ -4,7 +4,7 @@ import App from './App'
 import './index.css'
 import { LocaleProvider } from './context/LocaleContext'
 import { CartProvider } from './context/CartContext'
-import { FavoritesProvider } from './context/FavoritesContext' // не забудь импортировать
+import { FavoritesProvider } from './context/FavoritesContext' 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

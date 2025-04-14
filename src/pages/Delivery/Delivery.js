@@ -1,4 +1,3 @@
-// src/pages/Delivery.js
 import React from 'react'
 import './Delivery.css'
 

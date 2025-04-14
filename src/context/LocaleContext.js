@@ -1,11 +1,9 @@
 import React, { createContext, useState, useContext } from 'react'
 
-// Создаём сам контекст
 const LocaleContext = createContext()
 
-// Провайдер — оборачивает всё приложение
 export function LocaleProvider({ children }) {
-  const [city, setCity] = useState('Москва')
+  const [city, setCity] = useState('Алматы')
   const [language, setLanguage] = useState('RU')
 
   const value = {
@@ -22,5 +20,4 @@ export function LocaleProvider({ children }) {
   )
 }
 
-// Кастомный хук
 export const useLocale = () => useContext(LocaleContext)

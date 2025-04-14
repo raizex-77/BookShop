@@ -20,11 +20,11 @@ export default function VirtualBookList() {
   const { books, loading } = useBooks(); 
   const topBooks = books.filter(book => book.virtualTop); 
 
-  if (loading) return <p>Загрузка книг...</p>;
+
+  if (loading) return <p style={{ textAlign: 'center' }}>Загрузка книг...</p>;
 
   return (
     <div className="virtual-list-container">
-      <h2>📚 Лучшие книги (ТОП-50)</h2>
       <List
         height={500}
         itemCount={topBooks.length}

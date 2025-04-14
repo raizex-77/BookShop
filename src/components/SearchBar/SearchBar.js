@@ -1,4 +1,3 @@
-// src/components/SearchBar.js
 import React, { useState } from 'react'
 import './SearchBar.css'
 
@@ -8,7 +7,7 @@ function SearchBar({ onSearch }) {
   const handleInput = (e) => {
     const value = e.target.value
     setQuery(value)
-    onSearch(value)  // вызываем функцию из родителя при вводе
+    onSearch(value)  //вызываем функцию из родителя при вводе
   }
 
   return (
