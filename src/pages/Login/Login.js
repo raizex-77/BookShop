@@ -1,35 +1,26 @@
-import React, { useState } from 'react'
+
+import React, { useState } from 'react';
+import LoginForm from '../../components/AuthForms/LoginForm';
+import RegisterForm from '../../components/AuthForms/RegisterForm';
 import './Login.css'
 
 function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    alert(`Вход как ${email}`)
-  }
-
+  const [showLogin, setShowLogin] = useState(true);
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <h2>🔐 Вход</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Пароль"
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">Войти</button>
-    </form>
-  )
+    <div className="login-page">
+      <h1>Добро пожаловать в BookShop</h1>
+      
+      {showLogin ? (
+        <LoginForm />
+      ) : (
+        <RegisterForm />
+      )}
+
+      <button onClick={() => setShowLogin(!showLogin)}>
+        {showLogin ? "Зарегистрироваться" : "Войти"}
+      </button>
+    </div>
+  );
 }
 
-export default Login
+export default Login;

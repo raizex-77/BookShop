@@ -1,9 +1,7 @@
-// src/context/CartContext.test.js
 import React from 'react'
 import { renderHook, act } from '@testing-library/react'
 import { CartProvider, useCart } from './CartContext'
 
-// Оборачиваем хук в провайдер
 const wrapper = ({ children }) => <CartProvider>{children}</CartProvider>
 
 describe('CartContext', () => {

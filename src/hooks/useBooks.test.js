@@ -1,7 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react';
-import useBooks from './useBooks'; // ← если файл лежит в /hooks
+import useBooks from './useBooks'; 
 
-// Мокаем fetch и загружаем книги из JSON (выдержка из books.json)
 const mockBooks = [
   {
     id: 1,

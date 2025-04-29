@@ -49,6 +49,6 @@ describe('BookCard', () => {
     expect(cartButton).toBeInTheDocument()
     fireEvent.click(cartButton)
 
-    // Тут можно проверить поведение, если появится уведомление или изменится состояние
+    
   })
 })

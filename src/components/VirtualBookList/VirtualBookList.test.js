@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react'
 import VirtualBookList from './VirtualBookList'
 import { LocaleProvider } from '../../context/LocaleContext'
 
-// Мокаем хук useBooks
 jest.mock('../../hooks/useBooks', () => () => ({
   books: [
     {

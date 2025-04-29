@@ -22,7 +22,6 @@ export default function Home() {
 
   return (
     <main className="home-page">
-      {/* 👇 Кнопка наверху */}
       <div className="top-button-container">
         <button className="top-button" onClick={() => navigate('/top-books')}>
           📚 Смотреть Топ-50 книг

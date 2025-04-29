@@ -5,7 +5,6 @@ const FavoritesContext = createContext();
 export function FavoritesProvider({ children }) {
   const [favorites, setFavorites] = useState([]);
 
-  // Загрузка из localStorage при первом рендере
   useEffect(() => {
     const stored = localStorage.getItem('favorites');
     if (stored) {
@@ -13,7 +12,6 @@ export function FavoritesProvider({ children }) {
     }
   }, []);
 
-  // Сохраняем в localStorage при каждом изменении
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);

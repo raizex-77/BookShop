@@ -5,7 +5,7 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
 
-  // Загрузка корзины из localStorage при инициализации
+
   useEffect(() => {
     const stored = localStorage.getItem('cart');
     if (stored) {
@@ -13,12 +13,12 @@ export function CartProvider({ children }) {
     }
   }, []);
 
-  // Сохраняем корзину при каждом изменении
+
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // Добавление книги в корзину
+
   const addToCart = (book) => {
     setCartItems((prev) => {
       const existing = prev.find(item => item.id === book.id);
@@ -34,12 +34,12 @@ export function CartProvider({ children }) {
     });
   };
 
-  // Удаление по id
+
   const removeFromCart = (id) => {
     setCartItems((prev) => prev.filter(item => item.id !== id));
   };
 
-  // Очистка всей корзины
+
   const clearCart = () => {
     setCartItems([]);
   };

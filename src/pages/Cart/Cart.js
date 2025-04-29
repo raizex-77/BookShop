@@ -5,7 +5,6 @@ import { useCart } from '../../context/CartContext';
 function Cart() {
   const { cartItems, removeFromCart, clearCart } = useCart();
 
-  // Сумма всех товаров = цена * количество
   const totalPrice = cartItems.reduce(
     (sum, book) => sum + book.price * book.quantity,
     0

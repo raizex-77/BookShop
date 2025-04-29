@@ -24,7 +24,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/top-books" element={<VirtualBookList />} /> // ← здесь
+        <Route path="/top-books" element={<VirtualBookList />} />
 
       </Routes>
 

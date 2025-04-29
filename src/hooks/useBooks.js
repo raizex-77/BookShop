@@ -1,4 +1,3 @@
-// src/components/useBooks.js
 import { useState, useEffect } from 'react';
 
 export default function useBooks() {
