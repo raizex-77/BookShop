@@ -1,0 +1,72 @@
+.avatar-selection {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .avatar-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .avatar-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  
+  .avatar-thumb.selected {
+    border-color: black;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column; /* 👈 Важное изменение */
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .register-form input {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .register-form button {
+    width: 316px;
+    height: 45px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .switch-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  
+  .switch-link span {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

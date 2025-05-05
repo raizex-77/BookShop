@@ -30,7 +30,7 @@ export default function VirtualBookList() {
         itemCount={topBooks.length}
         itemSize={80}
         itemData={topBooks}
-        width="100%"
+        width={800}
       >
         {BookRow}
       </List>

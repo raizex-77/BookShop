@@ -1,25 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SearchBar from '../SearchBar/SearchBar'
-import GenreFilter from '../GenreFilter/GenreFilter'
-import { useLocale } from '../../context/LocaleContext'
-import './Header.css'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import SearchBar from '../SearchBar/SearchBar';
+import GenreFilter from '../GenreFilter/GenreFilter';
+import { useLocale } from '../../context/LocaleContext';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import './Header.css';
 
 function Header() {
-  const { city, setCity, language, setLanguage } = useLocale()
+  const { city, setCity, language, setLanguage } = useLocale();
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      console.log('Пользователь вышел');
+    } catch (error) {
+      console.error('Ошибка выхода:', error);
+    }
+  };
 
   const handleSearch = (value) => {
-    console.log('Ищем:', value)
-  }
+    console.log('Ищем:', value);
+  };
 
   const handleGenreSelect = (genre) => {
-    console.log('Выбран жанр:', genre)
-  }
+    console.log('Выбран жанр:', genre);
+  };
 
   return (
     <header className="header">
       <div className="header-left">
-        <h1 className="logo">📚 BookShop</h1>
+      <Link to="/" className="logo">📚 BookShop</Link>
         <SearchBar onSearch={handleSearch} />
         <GenreFilter onSelect={handleGenreSelect} />
       </div>
@@ -28,7 +42,19 @@ function Header() {
         <Link to="/favorites">Избранное</Link>
         <Link to="/delivery">Доставка</Link>
         <Link to="/cart">Корзина</Link>
-        <Link to="/login">Войти</Link>
+
+        {user ? (
+          <>
+            <img
+              src={user.photoURL || '/avatars/avatar1.png'}
+              alt="avatar"
+              className="avatar"
+              onClick={() => navigate('/profile')}
+            />
+          </>
+        ) : (
+          <Link to="/login">Войти</Link>
+        )}
 
         <select
           className="city-select"
@@ -51,7 +77,7 @@ function Header() {
         </select>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

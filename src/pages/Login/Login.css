@@ -1,24 +1,36 @@
-.login-page {
+.auth-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px;
-  min-height: 100vh;
-  background-color: #f4f4f4;
+  margin-top: 40px;
 }
 
-.login-page h1 {
-  margin-bottom: 24px;
-}
-
-.login-page form {
+.auth-form {
   display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
 }
 
-.login-page button {
-  padding: 8px 16px;
-  font-weight: bold;
+.auth-form input,
+.auth-form button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.auth-link {
+  color: blue;
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-success {
+  text-align: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
